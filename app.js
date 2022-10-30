@@ -32,9 +32,6 @@ const createHeader = () => {
   th.innerText = "ID";
   header.append(th);
   th = document.createElement("th");
-  th.innerText = "Gender";
-  header.append(th);
-  th = document.createElement("th");
   th.innerText = 'FirstName';
   header.append(th);
   th = document.createElement("th");
@@ -42,6 +39,9 @@ const createHeader = () => {
   header.append(th);
   th = document.createElement("th");
   th.innerText = "Capsule";
+  header.append(th);
+  th = document.createElement("th");
+  th.innerText = "Gender";
   header.append(th);
   th = document.createElement("th");
   th.innerText = 'Age';
@@ -80,10 +80,11 @@ const buildTable = (arrOfData) => {
     for(let i = 0; i < arrOfData.length; i++) {
     buildRow([
       arrOfData[i].id,      
-      arrOfData[i].gender,
+    
       arrOfData[i].firstName,
       arrOfData[i].lastName,
       arrOfData[i].capsule,
+      arrOfData[i].gender,
       arrOfData[i].age,
       arrOfData[i].city,
       arrOfData[i].hobby,
